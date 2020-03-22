@@ -14,14 +14,7 @@
     <url>http://www.yourorganization.org</url>
 
     <properties>
-        <dep.lombok>1.18.12</dep.lombok>
-        <dep.commons.lang>3.9</dep.commons.lang>
-        <dep.commons.collection>4.4</dep.commons.collection>
-        <dep.swagger>2.9.2</dep.swagger>
-        <dep.spring.boot.admin.client>2.2.2</dep.spring.boot.admin.client>
-        <dep.jaxb>2.3.1</dep.jaxb>
-        <dep.spring.boot>2.2.5.RELEASE</dep.spring.boot>
-        <dep.mysql>8.0.19</dep.mysql>
+        <app.name>${entity}Service</app.name>
 
         <!--TODO: add your keystore in /src/main/resource-->
         <service.https.port>httpsPort</service.https.port>
@@ -29,15 +22,27 @@
         <keystore.type>type</keystore.type>
         <keystore.file>keystore.p12</keystore.file>
         <keystore.password>password</keystore.password>
-        <keyalias.alias>alias</keyalias.alias>
+        <keystore.alias>alias</keystore.alias>
+
         <!--Spring Admin-->
         <admin.server.url>adminServerUrl</admin.server.url>
         <admin.server.usr>adminServerUsr</admin.server.usr>
         <admin.server.pwd>adminServerPwd</admin.server.pwd>
+
         <!--MySql-->
         <prop.db.url>yourMySqlUrl</prop.db.url>
         <prop.db.usr>yourMySqlUsr</prop.db.usr>
         <prop.db.pwd>yourMySqlPwd</prop.db.pwd>
+
+        <!--Dependencies-->
+        <dep.jaxb>2.3.1</dep.jaxb>
+        <dep.mysql>8.0.19</dep.mysql>
+        <dep.swagger>2.9.2</dep.swagger>
+        <dep.lombok>1.18.12</dep.lombok>
+        <dep.commons.lang>3.9</dep.commons.lang>
+        <dep.spring.boot>2.2.5.RELEASE</dep.spring.boot>
+        <dep.commons.collection>4.4</dep.commons.collection>
+        <dep.spring.boot.admin.client>2.2.2</dep.spring.boot.admin.client>
     </properties>
 
     <parent>
