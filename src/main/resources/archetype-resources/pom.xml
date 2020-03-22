@@ -18,10 +18,23 @@
         <dep.commons.lang>3.9</dep.commons.lang>
         <dep.commons.collection>4.4</dep.commons.collection>
         <dep.swagger>2.9.2</dep.swagger>
+        <dep.spring.boot.admin.client>2.2.2</dep.spring.boot.admin.client>
         <dep.jaxb>2.3.1</dep.jaxb>
         <dep.spring.boot>2.2.5.RELEASE</dep.spring.boot>
         <dep.mysql>8.0.19</dep.mysql>
 
+        <!--TODO: add your keystore in /src/main/resource-->
+        <service.https.port>httpsPort</service.https.port>
+        <service.http.port>httpPort</service.http.port>
+        <keystore.type>type</keystore.type>
+        <keystore.file>keystore.p12</keystore.file>
+        <keystore.password>password</keystore.password>
+        <keyalias.alias>alias</keyalias.alias>
+        <!--Spring Admin-->
+        <admin.server.url>adminServerUrl</admin.server.url>
+        <admin.server.usr>adminServerUsr</admin.server.usr>
+        <admin.server.pwd>adminServerPwd</admin.server.pwd>
+        <!--MySql-->
         <prop.db.url>yourMySqlUrl</prop.db.url>
         <prop.db.usr>yourMySqlUsr</prop.db.usr>
         <prop.db.pwd>yourMySqlPwd</prop.db.pwd>
@@ -77,6 +90,12 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-bean-validators</artifactId>
             <version>${dep.swagger}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-starter-client -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>${dep.spring.boot.admin.client}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
         <dependency>
@@ -138,6 +157,16 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
+                <excludes>
+                    <exclude>${keystore.file}</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>${keystore.file}</include>
+                </includes>
             </resource>
         </resources>
     </build>
