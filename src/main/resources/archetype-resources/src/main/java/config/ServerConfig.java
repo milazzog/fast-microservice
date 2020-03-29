@@ -9,9 +9,6 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Created by milazzog on 22/03/2020.
- */
 @Configuration
 public class ServerConfig {
 

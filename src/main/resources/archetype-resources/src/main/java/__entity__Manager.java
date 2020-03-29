@@ -15,9 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import javax.net.ssl.HttpsURLConnection;
 import java.util.Collections;
 
-/**
- * Created by milazzog on 20/03/2020.
- */
 @SpringBootApplication
 @EnableSwagger2
 public class ${entity}Manager {

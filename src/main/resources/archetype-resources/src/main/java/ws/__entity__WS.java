@@ -12,9 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by milazzog on 21/03/2020.
- */
 @RestController
 public class ${entity}WS {
 
